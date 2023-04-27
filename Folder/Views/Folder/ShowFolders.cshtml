@@ -1,0 +1,15 @@
+﻿@using Folders.DAL;
+
+@model List<Folder>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h2>"Folder" - @ViewBag.Folders</h2>
+<ul>
+    @foreach (var folder in Model)
+    {
+   <li> "SubFolder" -<a asp-controller="Folder" asp-action="ShowFolders"  asp-route-folderId="@folder.Id">> @folder.Name</a></li>
+    }
+</ul>
+
+
